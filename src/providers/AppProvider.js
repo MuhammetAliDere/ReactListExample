@@ -77,7 +77,7 @@ class AppProvider extends Component{
         }
         this.paginate(newIndex);
     }
-    returnToListClicked(updateTime, linkType){
+    voteClicked(updateTime, linkType){
         let { linkList } = this.state;
         const listItem = linkList.filter(item => item.updateTime === updateTime);
         const index = linkList.indexOf(listItem[0]);
@@ -171,7 +171,7 @@ class AppProvider extends Component{
             <AppContext.Provider value={{
                 state: this.state,
                 actions: {
-                    returnToListClicked: (rowNo, changeType) => this.returnToListClicked(rowNo, changeType),
+                    voteClicked: (rowNo, changeType) => this.voteClicked(rowNo, changeType),
                     addNewLink: _ => this.addNewLink(),
                     onInputchange: e => this.onInputchange(e),
                     orderByChanged: e =>  this.orderByChanged(e),

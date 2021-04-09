@@ -102,11 +102,11 @@ function ListItem(props) {
                 <Name>{props.data.name}</Name>
                 <Link>{props.data.url}</Link>
                 <Votes>
-                    <UpLink onClick={() => context.actions.returnToListClicked(props.data.updateTime, 'up')}>
+                    <UpLink onClick={() => context.actions.voteClicked(props.data.updateTime, 'up')}>
                         <UpArrow/>
                         Up Vote
                     </UpLink>
-                    <DownLink onClick={() => context.actions.returnToListClicked(props.data.updateTime, 'down')}>
+                    <DownLink onClick={() => context.actions.voteClicked(props.data.updateTime, 'down')}>
                         <DownArrow/>
                         Down Vote
                     </DownLink>
